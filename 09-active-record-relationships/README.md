@@ -1,0 +1,50 @@
+[bit of news](https://www.nytimes.com/2018/09/28/technology/facebook-hack-data-breach.html)
+
+# ActiveRecord Relationships
+
+- Where does ActiveRecord come from again?
+- What' this ORM thing?
+- Migrations?
+- wat
+- Model vs Class vs Table // WAT
+- CRUD
+- WUT
+
+## Our domain today - Pizza
+
+- Eater has many pizzas, so ... `has_many :pizzas`
+- PizzaTopping is on a pizza and has toppings, thus it `belongs_to :pizza` and `belongs_to :topping`
+- Pizza was bought by someone, so ... `belongs_to :eater`, `has_many :pizza_toppings`, and `has_many :toppings, through: :pizza_toppings`
+- Topping is composed of many things and can be reused as a recipte, therefore `has_many :pizza_toppings` and `has_many :pizzas, through :pizza_toppings`
+
+```ruby
+# How doe we write our models again?
+class ModelNameInCapitalizedCamelCase << ActiveRecord::Base
+  # Describe relationships here
+end
+```
+
+- What is a model again?
+- 4 steps you need to take for every model to work:
+- - create it
+- - generate the migration file and write the contents 
+- - run the migration, debug anything that needs debugging
+- - evaluate the correctness of the schema
+- Which models have foreign keys here? How do we know it? What does it even mean? Let's discuss!
+
+SO...
+
+1. Create all models
+2. Successfuly get them working with our db (what kind of db is it again? Hint: filedb, not suitable for prod)
+3. Create some instances in the console
+4. Try to refer to relevant data using instance methods.
+5. Bask in AR glory
+6. Look at what you've had to write last week
+6. Bask again
+7. PROFIT   
+
+## References, tricks and notes
+
+- check out `_` in pry
+- [AR docs](https://github.com/rails/rails/tree/master/activerecord)
+- assigning an array to `topping_ids` on pizza like that: `pizza.topping_ids = [1, 3, 5]`
