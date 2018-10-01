@@ -48,3 +48,14 @@ SO...
 - check out `_` in pry
 - [AR docs](https://github.com/rails/rails/tree/master/activerecord)
 - assigning an array to `topping_ids` on pizza like that: `pizza.topping_ids = [1, 3, 5]`
+
+## AR Methods I've used:
+
+Here's a list of some methods from AR I've used during the lecture. It's not meant to be a comprehensive one, merely a reminder. To get all info about the functionality of AR, remember you should always go to [RAILS GUIDES](https://guides.rubyonrails.org/active_record_basics.html).
+
+- `Pizza.first`
+- `Pizza.find(3)`
+- `Pizza.toppings[0].name`
+- `hawaiian = Pizza.find_by(name: "Hawaiian")`
+- `hawaiian.eater = Eater.first`
+- `hawaiian.save`
