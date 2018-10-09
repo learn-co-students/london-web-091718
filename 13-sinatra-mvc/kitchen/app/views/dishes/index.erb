@@ -1,0 +1,7 @@
+<h1>Hello, we have some <%= @type_of_food %> for you!</h1>
+
+<ul>
+  <% @dishes.each do |dish| %>
+    <li> <%= dish.name %> is going to cost you £<%= dish.price %>, it is <%= dish.available ? 'available' : 'not available' %> and calorie count is : <%= dish.calorie_count %> </li>
+  <% end %>
+</ul>
