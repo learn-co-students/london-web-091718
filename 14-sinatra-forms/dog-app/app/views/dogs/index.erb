@@ -1,0 +1,11 @@
+<h1>All the dogs</h1>
+
+<img src="https://loremflickr.com/320/240/dog" />
+
+<% @dogs.each do |dog| %>
+  <ul>
+      <li>
+        <a href=<%="/dogs/#{dog.id}"%> > <%= dog.name %> </a>
+      </li>
+  </ul>
+<% end %>

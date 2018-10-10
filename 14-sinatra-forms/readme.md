@@ -54,6 +54,8 @@ class CreateDogsTable < ActiveRecord::Migration
 end
 ```
 
+## Let's get some dogs created on the command line
+
 READ
 
 ```ruby
@@ -71,7 +73,6 @@ class DogsContorller < ApplicationController
   end
 end
 ```
-
 
 ```ruby
 # config.ru
