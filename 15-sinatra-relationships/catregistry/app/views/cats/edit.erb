@@ -1,0 +1,15 @@
+<h1>Edit a cat</h1>
+
+<form action="/cats/<%= @cat.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="cat[name]" value="<%= @cat.name %>"/>
+  <label for="breed">Breed:</label>
+  <input id="breed" type="text" name="cat[breed]" value="<%= @cat.breed %>"/>
+  <input type="submit" />
+</form>
+
+<form action="/cats/<%= @cat.id %>" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="delete the cat ;(">
+</form>
