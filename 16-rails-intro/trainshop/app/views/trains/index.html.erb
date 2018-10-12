@@ -1,0 +1,11 @@
+<h1>All trains</h1>
+
+<ul>
+  <% @trains.each do |train| %>
+    <li>
+      <%= link_to train.name, train %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'dan', dan_page_url %>
