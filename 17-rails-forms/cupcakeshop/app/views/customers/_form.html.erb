@@ -8,13 +8,17 @@
   </ul>
 <% end %>
 
-<%= form_for @cupcake do |f| %>
+<%= form_for @customer do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
 
-  <%= f.collection_select :customer_id, @customers, :id, :name %>
+  <br>
+  <hr>
+
+  <%= f.collection_check_boxes :cupcake_ids, @cupcakes, :id, :name %>
+
+  <br>
+  <hr>
 
   <%= f.submit id: 'submit' %>
 <% end %>

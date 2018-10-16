@@ -1,0 +1,18 @@
+<h1> <%= @customer.name %> </h1>
+
+<p>hello!</p>
+
+<% if @customer.cupcakes.length > 0  %>
+  <ul>
+    <% @customer.cupcakes.each do |cupcake| %>
+      <li>
+        <%= link_to cupcake.name, cupcake  %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>I have no cupcakes ;(</p>
+<% end %>
+
+<%= link_to "edit me", edit_customer_path %>
+<%= link_to "All Customers", customers_path %>

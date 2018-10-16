@@ -1,5 +1,13 @@
 <h1> <%= @cupcake.name %> </h1>
 <p>This costs £<%= @cupcake.price %> </p>
 
+
+<% if @cupcake.customer %>
+  <p>
+    I am a one of a kind cupcake and the current owner is:
+    <%= link_to @cupcake.customer.name, customer_path(@cupcake.customer) %>
+  </p>
+<% end  %>
+
 <%= link_to "edit me", edit_cupcake_path %>
 <%= link_to "All Cupcakes", cupcakes_path %>

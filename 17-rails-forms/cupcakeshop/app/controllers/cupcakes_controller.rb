@@ -1,5 +1,6 @@
 class CupcakesController < ApplicationController
   before_action :set_cupcake, only: [:show, :edit, :update, :destroy]
+  before_action :set_customers, only: [:new, :edit]
 
   def index
     @cupcakes = Cupcake.all
@@ -13,11 +14,11 @@ class CupcakesController < ApplicationController
   end
 
   def create
+    byebug
     @cupcake = Cupcake.create(cupcake_params)
     if @cupcake.valid?
       redirect_to @cupcake
     else
-      byebug
       flash[:errors] = @cupcake.errors.full_messages
       redirect_to new_cupcake_path
     end
@@ -44,10 +45,14 @@ class CupcakesController < ApplicationController
   private
 
   def cupcake_params
-    params.require(:cupcake).permit(:name, :price)
+    params.require(:cupcake).permit(:name, :price, :customer_id)
   end
 
   def set_cupcake
     @cupcake = Cupcake.find(params[:id])
+  end
+
+  def set_customers
+    @customers = Customer.all
   end
 end
