@@ -16,5 +16,10 @@
 
   <%= f.collection_select :customer_id, @customers, :id, :name %>
 
+  <hr>
+  <h2>Available Ingredients:</h2>
+  <%= f.collection_check_boxes :ingredient_ids, @ingredients, :id, :name %>
+  <hr>
+
   <%= f.submit id: 'submit' %>
 <% end %>

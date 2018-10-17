@@ -1,0 +1,15 @@
+<h1> <%= @ingredient.name %> </h1>
+
+<% if @ingredient.cupcakes.length > 0 %>
+  <p> This ingredient is used in the following cupcakes: </p>
+  <ul>
+    <% @cupcakes.each do |cupcake| %>
+      <li>
+        <%= link_to cupcake.name, cupcake_path(cupcake) %>
+      </li>
+    <% end %>
+  </ul>
+<% end  %>
+
+<%= link_to "edit me", edit_ingredient_path %>
+<%= link_to "All Ingredients", ingredients_path %>

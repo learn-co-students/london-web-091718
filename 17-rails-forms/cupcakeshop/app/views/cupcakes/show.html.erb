@@ -9,5 +9,10 @@
   </p>
 <% end  %>
 
+
+<% if @cupcake.ingredients.length > 0 %>
+   <p> <%= @cupcake.recipe %> </p>
+<% end %>
+
 <%= link_to "edit me", edit_cupcake_path %>
 <%= link_to "All Cupcakes", cupcakes_path %>

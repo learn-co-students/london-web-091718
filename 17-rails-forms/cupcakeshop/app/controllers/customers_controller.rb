@@ -26,6 +26,7 @@ class CustomersController < ApplicationController
   def update
     @customer.update(customer_params)
     if @customer.valid?
+      # byebug
       redirect_to @customer
     else
       flash[:errors] = @customer.errors.full_messages
@@ -44,8 +45,9 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
+    # byebug
     params.require(:customer).permit(:name, cupcake_ids: [])
-  end 
+  end
 
   def set_customer
     @customer = Customer.find(params[:id])

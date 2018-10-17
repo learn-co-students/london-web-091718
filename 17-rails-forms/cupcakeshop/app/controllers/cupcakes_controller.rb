@@ -1,8 +1,10 @@
 class CupcakesController < ApplicationController
+  before_action :set_ingredients, only: [:new, :edit]
   before_action :set_cupcake, only: [:show, :edit, :update, :destroy]
   before_action :set_customers, only: [:new, :edit]
 
   def index
+    # byebug
     @cupcakes = Cupcake.all
   end
 
@@ -10,11 +12,11 @@ class CupcakesController < ApplicationController
   end
 
   def new
+    # byebug
     @cupcake = Cupcake.new
   end
 
   def create
-    byebug
     @cupcake = Cupcake.create(cupcake_params)
     if @cupcake.valid?
       redirect_to @cupcake
@@ -35,6 +37,7 @@ class CupcakesController < ApplicationController
   end
 
   def edit
+    # byebug
   end
 
   def destroy
@@ -45,7 +48,7 @@ class CupcakesController < ApplicationController
   private
 
   def cupcake_params
-    params.require(:cupcake).permit(:name, :price, :customer_id)
+    params.require(:cupcake).permit(:name, :price, :customer_id, ingredient_ids: [])
   end
 
   def set_cupcake
@@ -54,5 +57,9 @@ class CupcakesController < ApplicationController
 
   def set_customers
     @customers = Customer.all
+  end
+
+  def set_ingredients
+    @ingredients = Ingredient.all
   end
 end
