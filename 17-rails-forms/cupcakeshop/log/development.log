@@ -4054,3 +4054,880 @@ Processing by CupcakesController#index as HTML
 Completed 200 OK in 235ms (Views: 226.0ms | ActiveRecord: 1.0ms)
 
 
+Started GET "/cupcakes/new" for 127.0.0.1 at 2018-10-18 09:46:48 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CupcakesController#new as HTML
+  Rendering cupcakes/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/cupcakes/_form.html.erb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/cupcakes/_form.html.erb:21
+  Rendered cupcakes/_form.html.erb (148.2ms)
+  Rendered cupcakes/new.html.erb within layouts/application (155.1ms)
+Completed 200 OK in 378ms (Views: 344.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cupcakes/" for 127.0.0.1 at 2018-10-22 17:11:32 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.5ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 210ms (Views: 188.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/cupcakes/new" for 127.0.0.1 at 2018-10-22 17:11:47 +0100
+Processing by CupcakesController#new as HTML
+  Rendering cupcakes/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.8ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/cupcakes/_form.html.erb:17
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/cupcakes/_form.html.erb:21
+  Rendered cupcakes/_form.html.erb (135.2ms)
+  Rendered cupcakes/new.html.erb within layouts/application (141.9ms)
+Completed 200 OK in 183ms (Views: 162.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2018-10-22 17:11:51 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 35.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/4" for 127.0.0.1 at 2018-10-22 17:11:52 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 4]]
+  ↳ app/views/customers/show.html.erb:5
+  Rendered customers/show.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 54ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2018-10-22 17:11:53 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCupcake Load (0.3ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/customers/show.html.erb:5
+  Rendered customers/show.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 75ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2018-10-22 17:11:57 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCupcake Load (0.4ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/customers/show.html.erb:5
+  Rendered customers/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 47ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/customers/3/edit" for 127.0.0.1 at 2018-10-22 17:11:57 +0100
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  Rendering customers/edit.html.erb within layouts/application
+  [1m[36mCupcake Load (0.3ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/customers/_form.html.erb:18
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "cupcakes"."id" FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/customers/_form.html.erb:18
+  Rendered customers/_form.html.erb (7.1ms)
+  Rendered customers/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 51ms (Views: 41.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/customers/3" for 127.0.0.1 at 2018-10-22 17:12:00 +0100
+Processing by CustomersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"58+DEa1k75M3y7LfyY6d8jzRjQj4z16i8Ip1nPLWIvyafFtwKfd1tCmTZuXOhKhi7cZB4bVw2D57VGwHEBjcdA==", "customer"=>{"name"=>"Ryan", "cupcake_ids"=>["", "5", "6"]}, "commit"=>"Update Customer", "id"=>"3"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customers_controller.rb:27
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."id" IN (?, ?)[0m  [["id", 5], ["id", 6]]
+  ↳ app/controllers/customers_controller.rb:27
+  [1m[36mCupcake Load (0.1ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/controllers/customers_controller.rb:27
+  [1m[36mCupcake Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "cupcakes" WHERE "cupcakes"."name" = ? AND "cupcakes"."id" != ? LIMIT ?[0m  [["name", "Bamboozled"], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:27
+  [1m[36mCupcake Update (0.4ms)[0m  [1m[33mUPDATE "cupcakes" SET "customer_id" = ?, "updated_at" = ? WHERE "cupcakes"."id" = ?[0m  [["customer_id", 3], ["updated_at", "2018-10-22 16:12:00.761427"], ["id", 6]]
+  ↳ app/controllers/customers_controller.rb:27
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customers_controller.rb:27
+Redirected to http://localhost:3000/customers/3
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/customers/3" for 127.0.0.1 at 2018-10-22 17:12:00 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customers_controller.rb:53
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCupcake Load (0.1ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."customer_id" = ?[0m  [["customer_id", 3]]
+  ↳ app/views/customers/show.html.erb:5
+  Rendered customers/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cupcakes/5" for 127.0.0.1 at 2018-10-22 17:12:03 +0100
+Processing by CupcakesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT  "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/cupcakes_controller.rb:55
+  Rendering cupcakes/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/cupcakes/show.html.erb:5
+  [1m[36mIngredient Load (0.4ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cupcake_ingredients" ON "ingredients"."id" = "cupcake_ingredients"."ingredient_id" WHERE "cupcake_ingredients"."cupcake_id" = ?[0m  [["cupcake_id", 5]]
+  ↳ app/views/cupcakes/show.html.erb:13
+  Rendered cupcakes/show.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 59ms (Views: 50.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2018-10-22 17:12:12 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 52ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2018-10-22 17:12:19 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  [1m[36mCupcake Load (0.4ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/customers/_form.html.erb:18
+  Rendered customers/_form.html.erb (6.9ms)
+  Rendered customers/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 55ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-22 17:12:21 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.3ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 57ms (Views: 50.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cupcakes/new" for 127.0.0.1 at 2018-10-22 17:12:21 +0100
+Processing by CupcakesController#new as HTML
+  Rendering cupcakes/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/cupcakes/_form.html.erb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/cupcakes/_form.html.erb:21
+  Rendered cupcakes/_form.html.erb (12.9ms)
+  Rendered cupcakes/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 65ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ingredients/new" for 127.0.0.1 at 2018-10-22 17:12:28 +0100
+Processing by IngredientsController#new as HTML
+  Rendering ingredients/new.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/ingredients/_form.html.erb:17
+  Rendered ingredients/_form.html.erb (6.1ms)
+  Rendered ingredients/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 36ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cupcakes/new" for 127.0.0.1 at 2018-10-22 17:12:35 +0100
+Processing by CupcakesController#new as HTML
+  Rendering cupcakes/new.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/cupcakes/_form.html.erb:17
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients"[0m
+  ↳ app/views/cupcakes/_form.html.erb:21
+  Rendered cupcakes/_form.html.erb (13.0ms)
+  Rendered cupcakes/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 56ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-22 17:12:38 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.3ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cupcakes/1" for 127.0.0.1 at 2018-10-22 17:25:29 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CupcakesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCupcake Load (0.4ms)[0m  [1m[34mSELECT  "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cupcakes_controller.rb:55
+  Rendering cupcakes/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/cupcakes/show.html.erb:5
+  [1m[36mIngredient Load (0.2ms)[0m  [1m[34mSELECT "ingredients".* FROM "ingredients" INNER JOIN "cupcake_ingredients" ON "ingredients"."id" = "cupcake_ingredients"."ingredient_id" WHERE "cupcake_ingredients"."cupcake_id" = ?[0m  [["cupcake_id", 1]]
+  ↳ app/views/cupcakes/show.html.erb:13
+  Rendered cupcakes/show.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 251ms (Views: 224.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/cupcakes/1524" for 127.0.0.1 at 2018-10-22 17:25:32 +0100
+Processing by CupcakesController#show as HTML
+  Parameters: {"id"=>"1524"}
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT  "cupcakes".* FROM "cupcakes" WHERE "cupcakes"."id" = ? LIMIT ?[0m  [["id", 1524], ["LIMIT", 1]]
+  ↳ app/controllers/cupcakes_controller.rb:55
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Cupcake with 'id'=1524):
+  
+app/controllers/cupcakes_controller.rb:55:in `set_cupcake'
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:25:35 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:25:36 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:26:16 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:26:19 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:30:45 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:30:48 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:30:49 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:30:55 +0100
+Started PUT "/__web_console/repl_sessions/c0c2feaf9004c23d71dbcd602525b4f5" for 127.0.0.1 at 2018-10-22 17:31:01 +0100
+Started GET "/users" for 127.0.0.1 at 2018-10-23 10:17:36 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/customers" for 127.0.0.1 at 2018-10-23 10:17:42 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 130038ms (Views: 193.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/customers" for 10.218.1.134 at 2018-10-23 10:20:15 +0100
+Cannot render console from 10.218.1.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 62795ms (Views: 26.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/customers" for 10.218.1.134 at 2018-10-23 10:21:33 +0100
+Cannot render console from 10.218.1.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CustomersController#index as HTML
+Started GET "/customers" for 127.0.0.1 at 2018-10-23 10:22:21 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (8.0ms)
+  Rendered customers/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 3281ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Completed 200 OK in 52076ms (Views: 51.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/customers" for 127.0.0.1 at 2018-10-23 10:22:26 +0100
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:7
+  Rendered customers/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 24669ms (Views: 31.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 10:29:34 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 10:29:48 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"akhFUSiLhxPJI0AQLZJxWJIB4Xfj9lW5mVvF/SA5oNYY+bLtni+Fg+Fp8/y+5nW/qDIjelqvv3nYNfyIPbixGg==", "username"=>"daniel", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+Completed 500 Internal Server Error in 76852ms (ActiveRecord: 0.0ms)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/sessions_controller.rb:8:in `create'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20181023093335)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20181023093335_create_users.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "admin" boolean, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20181023093335_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181023093335"]]
+  ↳ bin/rails:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daniel"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "admin", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "Daniel"], ["admin", 1], ["password_digest", "$2a$10$UvgYFHkaBrc4xADryrbhY.c2OoqqE9qo/qX/T9ohzISPrMlvI3bI."], ["created_at", "2018-10-23 09:37:02.979132"], ["updated_at", "2018-10-23 09:37:02.979132"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Ryan"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Ryan"], ["password_digest", "$2a$10$ZODRKnaA/DBNXouNWzaPCu59BYDMpNrJPh2rJ79FwDvOodqMwphmi"], ["created_at", "2018-10-23 09:38:08.106907"], ["updated_at", "2018-10-23 09:38:08.106907"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/new" for 127.0.0.1 at 2018-10-23 10:47:12 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-23 10:47:47 +0100
+  
+Started GET "/users/new" for 127.0.0.1 at 2018-10-23 10:47:57 +0100
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/new" for 127.0.0.1 at 2018-10-23 10:48:10 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/users/new"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/signup" for 127.0.0.1 at 2018-10-23 10:48:24 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (117.4ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `users_path' for #<#<Class:0x007faf778dce48>:0x007faf77147390>):
+    1: <h1>Sign up</h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :username %>
+    4:   <%= f.text_field :username %>
+    5:   <%= f.label :password %>
+  
+app/views/users/new.html.erb:2:in `_app_views_users_new_html_erb___2071729273143139790_70195800895000'
+Started GET "/signup" for 127.0.0.1 at 2018-10-23 10:49:23 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 258ms (Views: 245.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2018-10-23 10:49:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 261ms (Views: 239.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-10-23 10:49:50 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IFs2sfqysFla9y5xIHsENKDA+iulsSM7nW1chiORQo9S6sENTBayyXK9nZ2zDwDTmvM4JhzoyfvcA2XzPhBTQw==", "user"=>{"username"=>"Oliver", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Oliver"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mCACHE User Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Oliver"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Oliver"], ["password_digest", "$2a$10$wPe74mq4kRaXzbXNwvhVEO/U5ZPVPWUmFyyKDVxOXYVa0kC95eJUu"], ["created_at", "2018-10-23 09:49:50.770791"], ["updated_at", "2018-10-23 09:49:50.770791"]]
+  ↳ app/controllers/users_controller.rb:10
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:10
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 72ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2018-10-23 10:49:50 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+Completed 406 Not Acceptable in 284ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionController::UnknownFormat (UsersController#show is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.2.1) lib/action_controller/metal/implicit_render.rb:55:in `default_render'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (5.2.1) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.1) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/3" for 127.0.0.1 at 2018-10-23 10:50:28 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:18
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 10:51:34 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 10:52:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xczUtR9QYWnO7RaNtdDCUBBToy82TsH1FTahBj06sbS3fSMJqfRj+eanpWEmpMa3KmBhIo8XKzVUWJhzILugeA==", "username"=>"Daniel", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daniel"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 9836ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 10:53:25 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 68ms (Views: 63.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 10:53:29 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qEjRtePFC4qBNH2G1ixytTMXWxZj38kaHhJPc6LKUjra+SYJVWEJGql+zmpFWHZSCSSZG9qGI9pffHYGv0tD9g==", "username"=>"Daniel", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daniel"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+No template found for SessionsController#create, rendering head :no_content
+Completed 204 No Content in 233391ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 10:57:54 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 253ms (Views: 243.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 10:57:58 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Qho6lPGOo4alOFbZJyZyWSslK8JRfrxvfBzd9AV0qqLuZ9W5WI4HjLeUrf36J0uXp9WorAcEDH8nkoCzZTDZg==", "username"=>"Daniel", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Daniel"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/cupcakes
+Completed 302 Found in 73ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 10:57:58 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 36ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 10:58:56 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2018-10-23 10:59:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/logout"):
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 11:00:12 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2018-10-23 11:00:16 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Ck3u4TH0nKjnjr9J2gscqN1+IT2O+bex5oUA8f3hrjl4/Bldh1CeOM/EDKVJfxhP503jMDegXXGn6zmE4GC/9Q=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 11:00:16 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 11:00:27 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2t+EBf3zFKUcRo5FhwkJ0rz9sVohEIPEFmf5TjtctTyobnO5S1cWNTQMPakUfQ01hs5zV5hJaQRXCcA7Jt2k8A==", "username"=>"Ryan", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Ryan"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/login
+Completed 302 Found in 62ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 11:00:28 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2018-10-23 11:00:34 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dPuqI1QeDUT2tKaBVmp9NtNodJ9Im+DFgetY+9XQ50EGSl2f4roP1N7+FW3FHnnR6Vu2kvHCCgXAhWGOyFH2jQ==", "username"=>"Ryan", "password"=>"[FILTERED]", "commit"=>"Save changes"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Ryan"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:7
+Redirected to http://localhost:3000/cupcakes
+Completed 302 Found in 61ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 11:00:34 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-23 11:00:42 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dkaczmarczyk/.rvm/gems/ruby-2.3.3/gems/railties-5.2.1/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 16ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 11:00:48 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 35ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/logout" for 127.0.0.1 at 2018-10-23 11:00:54 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JSMp503XNO9L7uDl74hSJ9UHRw3hFCIRl55A7jELClpXkt5b+3M2f2OkUwl8/FbA7zSFAFhNyNHW8HmbLIoblg=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2018-10-23 11:00:54 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 11:00:55 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 39ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cupcakes" for 127.0.0.1 at 2018-10-23 11:01:23 +0100
+Processing by CupcakesController#index as HTML
+  Rendering cupcakes/index.html.erb within layouts/application
+  [1m[36mCupcake Load (0.2ms)[0m  [1m[34mSELECT "cupcakes".* FROM "cupcakes"[0m
+  ↳ app/views/cupcakes/index.html.erb:7
+  Rendered cupcakes/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "oliver"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ed"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Ed"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "Ed"], ["password_digest", "$2a$10$Y0E7rx1BsIz6rm5Rn8TrVuTbac4JYyLklGOn54BbDP8o.g.KM6lHm"], ["created_at", "2018-10-23 10:04:54.107898"], ["updated_at", "2018-10-23 10:04:54.107898"]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Eddy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dan2"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["username", "dan2"], ["password_digest", "$2a$10$xrZG4syCRt/bNjq9XwlG3unShz7K6yHdvFWyVFUe0ej2l8yJc9Fmy"], ["created_at", "2018-10-23 10:06:35.030089"], ["updated_at", "2018-10-23 10:06:35.030089"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dan2"], ["LIMIT", 1]]

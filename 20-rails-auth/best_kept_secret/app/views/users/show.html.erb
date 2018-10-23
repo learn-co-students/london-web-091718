@@ -1,0 +1,12 @@
+<div>
+    <h1> <%= @user.username %> </h1>
+</div>
+
+<div>
+    <p> My secret is: </p>
+    <p> <%= @user.secret %></p>
+</div>
+
+<% if logged_in? && current_user.id == @user.id || current_user.admin == true %>
+    <%= link_to "Edit my secret", edit_user_url %>
+<% end %>

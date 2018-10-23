@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :customers
   resources :ingredients
+  resources :users, only: [:index, :show, :create, :edit, :update, :delete]
 
   # 7 restful routes
   # verb route to: controller#method alias
@@ -20,4 +21,13 @@ Rails.application.routes.draw do
 
   # delete
   delete '/cupcakes/:id', to: 'cupcakes#destroy'
+
+
+  # users
+  get "/signup", to: 'users#new', as: 'signup'
+
+  # session functionality
+  get '/login', to: 'sessions#new', as: 'login'
+  post '/sessions', to: 'sessions#create', as: 'sessions'
+  post '/logout', to: 'sessions#destroy', as: 'logout'
 end

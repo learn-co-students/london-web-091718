@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <h1>HELLO, your user id is <%= session[:user_id] %> </h1>
+    <%= link_to "Log out", logout_path, method: "post" %>
     <%= yield %>
   </body>
 </html>
