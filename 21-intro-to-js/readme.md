@@ -1,25 +1,15 @@
-# Introduction to JavaScript
+# Intro to JS
 
-## Different about JS
-- Brackets everywhere
-- Type coercion
-- `var`, `const` and `let` for variable declarations
+### Resources
+[History of JavaScript - Video](https://www.youtube.com/watch?v=EUAmiIsp2YU)
 
-## Outline
+### JS vs Ruby
+- Syntax: {}, Object.assign,
+- Semicolons `;`
+- Explicit return
+- Always call functions with `()`
+- Mapping (not anymore! use arrow functions)
 
-
-```
-  5m History of Javascript
-  5m Review request Response cycle
-  5m JavaScript Data Types Overview
-  5m Constructors vs Literals
-  10m Primitives
-  20m Non-primitives
-  5m Type Checking
-  5m Doing Labs
-  --
-  60m Total
-```
 
 ### History of JavaScript
 * Early Days
