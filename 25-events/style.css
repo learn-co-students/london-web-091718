@@ -1,0 +1,19 @@
+#poke-list {
+  list-style: none;
+  max-width: 200px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  left: -20px;
+}
+
+.poke-item {
+  border: solid 2px black;
+  margin: 10px;
+  text-align: center;
+}
+
+img {
+  width: 100px;
+}
+
