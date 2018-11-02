@@ -1,0 +1,26 @@
+body {
+  text-align: center;
+}
+
+input {
+  font-size: 2rem;
+  border-radius: 5px;
+  border: solid 4px lightblue;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+button {
+  font-size: 2rem;
+  border-radius: 5px;
+  /* border: solid 4px lightblue; */
+  padding: 8px 13px;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+img {
+  width: 200px;
+}
