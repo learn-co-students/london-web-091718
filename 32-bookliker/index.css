@@ -1,0 +1,15 @@
+body {
+    display: grid;
+    grid-template-columns: 2fr 8fr
+}
+
+button {
+    background-color: green;
+    color: #dedede;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    background-color: #979797;
+    color: #dedede;
+}
