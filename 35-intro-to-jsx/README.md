@@ -1,6 +1,6 @@
 # Intro to JSX
 
-### Ruby vs JS so far
+### JS so far
 
 * lack of structure
 * unnecessarily complex syntax at times
