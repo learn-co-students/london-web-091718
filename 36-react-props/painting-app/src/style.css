@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+}
+
+.painting {
+  border: solid 2px black;
+  width: 230px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.painting img {
+  width: 200px;
+}
