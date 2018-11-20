@@ -91,8 +91,6 @@ ReactDOM.render(
     title='Hello React!'
     subtitle="Isn't this cool!?"
     icon='react'
-    names={['Nico', 'Sang', 'Irum', 'Dina', 'Oliver']}
-    age={30}
   />,
   // and where to put it
   document.querySelector('#root')
