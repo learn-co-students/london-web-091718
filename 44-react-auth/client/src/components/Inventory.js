@@ -1,26 +1,11 @@
 import React from 'react'
 
 import Item from './Item'
+import API from '../API'
 
 class Inventory extends React.Component {
   state = {
-    items: [
-      {
-        id: 1,
-        name: 'Item 1',
-        description: 'Stuff'
-      },
-      {
-        id: 2,
-        name: 'Item 2',
-        description: 'Stuff'
-      },
-      {
-        id: 3,
-        name: 'Item 3',
-        description: 'Stuff'
-      }
-    ]
+    items: []
   }
 
   style = {
@@ -30,10 +15,17 @@ class Inventory extends React.Component {
     flexWrap: 'wrap'
   }
 
+  getInventory () {
+    API.getInventory()
+      .then(items => this.setState({ items }))
+  }
+
   componentDidMount () {
     const { history, username } = this.props
     if (!username) {
       history.push('/signin')
+    } else {
+      this.getInventory()
     }
   }
 

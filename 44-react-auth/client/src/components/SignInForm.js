@@ -19,7 +19,7 @@ class SignInForm extends React.Component {
         if (data.error) {
           alert('Wrong!!!!!!!!!!!')
         } else {
-          signin(data.username)
+          signin(data)
           history.push('/inventory')
         }
       })

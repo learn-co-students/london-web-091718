@@ -13,24 +13,23 @@ class App extends Component {
     username: ''
   }
 
-  signin = username => {
-    localStorage.setItem('username', username)
-    this.setState({ username })
+  signin = user => {
+    localStorage.setItem('token', user.token)
+    this.setState({ username: user.username })
   }
 
   signout = () => {
-    localStorage.removeItem('username')
+    localStorage.removeItem('token')
     this.setState({ username: '' })
   }
 
   componentDidMount () {
-    const username = localStorage.getItem('username')
     API.validate()
       .then(data => {
         if (data.error) {
           this.signout()
         } else {
-          this.signin(data.username)
+          this.signin(data)
           this.props.history.push('/inventory')
         }
       })

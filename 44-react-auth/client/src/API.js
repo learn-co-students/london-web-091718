@@ -8,10 +8,17 @@ class API {
   }
 
   static validate () {
-    return fetch('http://localhost:3001/validate', {
+    return this.get('http://localhost:3001/validate')
+  }
+
+  static getInventory () {
+    return this.get('http://localhost:3001/inventory')
+  }
+
+  static get (url) {
+    return fetch(url, {
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('username')
+        'Authorization': localStorage.getItem('token')
       },
     }).then(resp => resp.json())
   }
