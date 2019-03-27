@@ -1,7 +1,7 @@
 # Intro to Redux
 
 ### Resources
-- [Intro to Redux - Slides](https://docs.google.com/presentation/d/1IIzo1y-nHkQEGtEhDiq7NevbTipq0jGj9XjOs4hLE9)
+- [Intro to Redux - Slides](https://docs.google.com/presentation/d/1fEeWYESORIJCKqEWxYrT8FoME1clH6iBfj4_aVA6mh0)
 - [Todo List (Pure Redux)](https://stackblitz.com/edit/mod4-redux-todos)
 - [Counter (Pure Redux)](https://stackblitz.com/edit/mod4-redux-counter)
 
